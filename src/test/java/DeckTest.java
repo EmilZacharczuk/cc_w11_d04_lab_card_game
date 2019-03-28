@@ -46,4 +46,10 @@ public class DeckTest {
         Card expectedCard = deck.getCards().get(0);
         assertNotEquals(expectedCard.rank(), actualCard.rank());
     }
+
+    @Test
+    public void canDealCard(){
+        deck.populateCards();
+
+    }
 }

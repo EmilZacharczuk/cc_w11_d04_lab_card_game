@@ -32,11 +32,7 @@ public class Deck {
     }
 
     public void shuffleCards() {
-        List<Card> solution = this.cards;
-        for(int i = 0; i < 6; i++) {
-            solution.add(this.cards.get(i));
-        }
-        Collections.shuffle(solution);
+        Collections.shuffle(this.cards);
 
 
         /*
