@@ -39,6 +39,21 @@ public class Deck {
         return this.cards.remove(0);
     }
 
+    public void shuffleFisherYates() {
+        Random randomGenerator = new Random();
+        Card[] cardsArray = this.cards.toArray(new Card[this.cards.size()]);
+
+       for (int i = 0; i < cardsArray.length; i++) {
+           int randomPosition = randomGenerator.nextInt(cardsArray.length);
+           Card temp = cardsArray[i];
+           cardsArray[i] = cardsArray[randomPosition];
+           cardsArray[randomPosition] = temp;
+       }
+        this.cards = new ArrayList<>(Arrays.asList(cardsArray));
+
+
+    }
+
 
 
 }

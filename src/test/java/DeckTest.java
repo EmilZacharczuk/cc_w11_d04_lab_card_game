@@ -53,4 +53,13 @@ public class DeckTest {
         deck.dealCard();
         assertEquals(51, deck.getCount());
     }
+
+    @Test
+    public void canFisherYatesSuffle(){
+        deck.populateCards();
+        Card actualCard = deck.getCards().get(0);
+        deck.shuffleFisherYates();
+        Card expectedCard = deck.getCards().get(0);
+        assertNotEquals(expectedCard.rank(), actualCard.rank());
+    }
 }
