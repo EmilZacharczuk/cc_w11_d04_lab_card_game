@@ -50,6 +50,7 @@ public class DeckTest {
     @Test
     public void canDealCard(){
         deck.populateCards();
-
+        deck.dealCard();
+        assertEquals(51, deck.getCount());
     }
 }
