@@ -55,7 +55,7 @@ public class DeckTest {
     }
 
     @Test
-    public void canFisherYatesSuffle(){
+    public void canFisherYatesShuffle(){
         deck.populateCards();
         Card actualCard = deck.getCards().get(0);
         deck.shuffleFisherYates();
